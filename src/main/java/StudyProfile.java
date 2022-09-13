@@ -1,13 +1,18 @@
 public enum StudyProfile {
+    PHYSICS("Физика"),
+    COMPUTER_SCIENCE("Информатика"),
+    MATHEMATICS("Математика"),
+    JURISPRUDENCE("Юриспруденция"),
     MEDICINE("Медицина"),
-    HISTORY("История"),
-    ENGINEERING("Машиностроение"),
-    MARKETING("Маркетинг"),
-    ECONOMIC("Экономика");
+    LINGUISTICS("Лингвистика");
 
-    final String profileName;
+    private final String profileName;
 
-    StudyProfile(String profileName) {
+    private StudyProfile(String profileName) {
         this.profileName = profileName;
+    }
+
+    public String getProfileName() {
+        return this.profileName;
     }
 }

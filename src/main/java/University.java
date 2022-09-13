@@ -20,47 +20,53 @@ public class University {
         return id;
     }
 
-    public void setId(String id) {
+    public University setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
+    public University setFullName(String fullName) {
         this.fullName = fullName;
+        return this;
     }
 
     public String getShortName() {
         return shortName;
     }
 
-    public void setShortName(String shortName) {
+    public University setShortName(String shortName) {
         this.shortName = shortName;
+        return this;
     }
 
     public int getYearOfFoundation() {
         return yearOfFoundation;
     }
 
-    public void setYearOfFoundation(int yearOfFoundation) {
+    public University setYearOfFoundation(int yearOfFoundation) {
         this.yearOfFoundation = yearOfFoundation;
+        return this;
     }
 
     public StudyProfile getMainProfile() {
         return mainProfile;
     }
 
-    public void setMainProfile(StudyProfile mainProfile) {
+    public University setMainProfile(StudyProfile mainProfile) {
         this.mainProfile = mainProfile;
+        return this;
     }
 
     @Override
     public String toString() {
-        return   "id университета: " + id + "\n" + "Полное название университета: " + fullName + "\n"
-                + "сокращенное название университета: " + shortName + "\n"
-                + "год основания университета: " + yearOfFoundation + "\n"
-                + "направление обучения: " + mainProfile;
+        return   "id университета: " + this.id + "\n" + "Полное название университета: " + this.fullName + "\n"
+                + "сокращенное название университета: " + this.shortName + "\n"
+                + "год основания университета: " + this.yearOfFoundation + "\n"
+                + "направление обучения: " + this.mainProfile+ "\n"
+                + "==================================================";
     }
 }

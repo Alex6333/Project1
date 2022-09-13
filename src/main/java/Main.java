@@ -1,11 +1,18 @@
+import java.io.IOException;
+import java.util.List;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        University medUniversity = new University("1","Самарский Государственный Медицинский Университет"
-                ,"СамГМУ",1930,StudyProfile.MEDICINE);
-        Student medicStudent = new Student("Иван Иванов","1",3,  4.3f);
-        System.out.println(medicStudent);
-        System.out.println(medUniversity);
+        List<Student> students = ReadFromFile.readStudents("C:\\Users\\ferfe\\IdeaProjects\\module_gradle\\Project1\\src\\main\\resources\\universityInfo.xlsx");
+        for (Student student: students) {
+            System.out.println(student);
+        }
+
+        List<University> universities = ReadFromFile.readUniversity("C:\\Users\\ferfe\\IdeaProjects\\module_gradle\\Project1\\src\\main\\resources\\universityInfo.xlsx");
+        for (University university: universities) {
+            System.out.println(university);
+        }
     }
 }

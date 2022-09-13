@@ -20,37 +20,42 @@ public class Student {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
+    public Student setFullName(String fullName) {
         this.fullName = fullName;
+        return this;
     }
 
     public String getUniversityId() {
         return universityId;
     }
 
-    public void setUniversityId(String universityId) {
+    public Student setUniversityId(String universityId) {
         this.universityId = universityId;
+        return this;
     }
 
     public int getCurrentCourseNumber() {
         return currentCourseNumber;
     }
 
-    public void setCurrentCourseNumber(int currentCourseNumber) {
+    public Student setCurrentCourseNumber(int currentCourseNumber) {
         this.currentCourseNumber = currentCourseNumber;
+        return this;
     }
 
     public float getAvgExamScore() {
         return avgExamScore;
     }
 
-    public void setAvgExamScore(float avgExamScore) {
+    public Student setAvgExamScore(float avgExamScore) {
         this.avgExamScore = avgExamScore;
+        return this;
     }
 
     @Override
     public String toString() {
-        return "Полное имя студента: " + fullName + "\n" + "id университета: " +  universityId + "\n"
-                + "номер курса: " + currentCourseNumber + "\n" + "средний балл: " + avgExamScore;
+        return "Полное имя студента: " + this.fullName + "\n" + "id университета: " + this.universityId + "\n"
+                + "номер курса: " + this.currentCourseNumber + "\n" + "средний балл: " + this.avgExamScore + "\n"
+                + "==================================================";
     }
 }
