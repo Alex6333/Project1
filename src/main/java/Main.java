@@ -1,10 +1,13 @@
 import Comparators.StudentComparator;
 import Comparators.UniversityComparator;
 import Utils.JsonUtil;
+import Utils.StatisticUtil;
 import Utils.UtilComparator;
 import enums.StudentsComparatorEnum;
 import enums.UniversityComparatorEnum;
 import io.ReadFromFile;
+import io.XlsWriter;
+import model.Statistics;
 import model.Student;
 import model.University;
 
@@ -46,5 +49,8 @@ public class Main {
             University jsonUniversity = JsonUtil.jsonToUniversity(universityJson);
             System.out.println(jsonUniversity);
         });
+
+        List<Statistics> statisticsList = StatisticUtil.createStatistics(students, universities);
+        XlsWriter.writeXls(statisticsList, "statistics.xlsx");
     }
 }
